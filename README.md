@@ -1,42 +1,55 @@
-Sales Data EDA
+# 📊 Sales Data EDA
 
-This notebook performs a comprehensive Exploratory Data Analysis (EDA) on the "Practice EDA on Sales Dataset" from Kaggle. The analysis aims to clean, preprocess, and explore sales data to extract actionable business insights.
+![Python](https://img.shields.io/badge/python-3.9-blue)
+![Pandas](https://img.shields.io/badge/pandas-1.5.3-brightgreen)
+![Matplotlib](https://img.shields.io/badge/matplotlib-3.7.1-orange)
 
-Key Steps in the Analysis
-1. Data Cleaning
+This notebook performs a **comprehensive Exploratory Data Analysis (EDA)** on the *"Practice EDA on Sales Dataset"* from [Kaggle](https://www.kaggle.com/datasets/dhruvkothari19/practice-eda-on-this-sales-dataset).  
+The analysis cleans, preprocesses, and explores sales data to extract actionable business insights.
 
-Null Handling: Identified and removed rows with missing values to ensure accurate analysis.
+---
 
-Duplicate Removal: Detected and removed duplicate entries caused by repeated orders or identical transactions.
+## **Key Steps in the Analysis**
 
-Data Type Conversion: Converted columns like Order ID, Quantity Ordered, and Price Each to numeric types. Transformed Order Date to datetime format for time-based analysis.
+### **1. Data Cleaning**
+- Handling null values and removing rows with missing data.
+- Removing duplicate entries caused by repeated orders or identical transactions.
+- Converting `Order ID`, `Quantity Ordered`, and `Price Each` to numeric types.
+- Transforming `Order Date` to `datetime` format for time-based analysis.
 
-2. Feature Engineering
+### **2. Feature Engineering**
+- Extracted `City` and `State` from `Purchase Address`.
+- Created `Total Price` column: `Quantity Ordered * Price Each`.
+- Extracted `Month`, `Date`, and `Time` from `Order Date`.
 
-City & State Extraction: Extracted City and State from the Purchase Address column to analyze location-based sales.
+### **3. Sales Analysis**
+- Identified **best month** for sales.
+- Analyzed **city-wise sales** and popular products in each city.
+- Determined **top-selling products** and monthly trends.
+- Found **optimal time to advertise** based on order times.
 
-Total Price: Created a Total Price column by multiplying Quantity Ordered with Price Each to calculate revenue per order.
+### **4. Visualizations**
+- Line plots and bar charts to show monthly sales trends.
+- Best and worst-selling products each month.
+- City-wise sales distribution.
+- Quantity of products sold over time.
 
-Month, Date & Time Columns: Extracted Month, Date, and Time from the Order Date column to analyze sales trends over time.
+---
 
-3. Sales Analysis
+## **Dataset**
+- Source: [Kaggle – Practice EDA on Sales Dataset](https://www.kaggle.com/datasets/dhruvkothari19/practice-eda-on-this-sales-dataset)
+- Format: CSV files
+- Size: ~373,700 rows, 6 columns
 
-Best Month for Sales: Identified the month with the highest total revenue.
+---
 
-City-wise Sales: Determined which city generated the most sales and which products were most popular in each city.
+## **Getting Started**
 
-Top-selling Products: Identified products with the highest quantity sold and analyzed monthly trends.
+### **Requirements**
+- Python 3.x
+- Libraries:
+  ```bash
+  pandas
+  matplotlib
+  numpy
 
-Optimal Advertising Time: Determined the time of day when most orders are placed, helping to plan marketing campaigns.
-
-4. Visualizations
-
-Line plots and bar charts were used to visualize:
-
-Monthly sales trends
-
-Best and worst-selling products each month
-
-City-wise sales distribution
-
-Quantity of products sold over time
